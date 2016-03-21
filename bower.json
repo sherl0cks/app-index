@@ -1,0 +1,22 @@
+{
+  "name": "app-index",
+  "homepage": "https://github.com/sherl0cks/app-index",
+  "authors": [
+    "Justin Holmes <justinmichaelholmes@gmail.com>"
+  ],
+  "description": "Simple web app to index apps I'm hosting. Build using Patternfly",
+  "main": "",
+  "moduleType": [],
+  "license": "Apache2",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "patternfly": "^3.3.0"
+  }
+}
