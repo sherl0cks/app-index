@@ -1,45 +1,48 @@
 <!DOCTYPE html>
-<!--[if IE 9]><html lang="en-us" class="ie9"><![endif]-->
-<!--[if gt IE 9]><!-->
-<html lang="en-us">
-<!--<![endif]-->
+<!--[if IE 9]>
+<html lang="en-us" class="ie9">
+	<![endif]-->
+	<!--[if gt IE 9]>
+	<!-->
+	<html lang="en-us" ng-app="appIndex">
+		<!--<![endif]-->
 <head>
-	<title>Apps - Justin Holmes</title>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="bower_components/patternfly/img/favicon.ico">
-	<!-- iPad retina icon -->
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-152.png">
-	<!-- iPad retina icon (iOS < 7) -->
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-144.png">
-	<!-- iPad non-retina icon -->
-	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-76.png">
-	<!-- iPad non-retina icon (iOS < 7) -->
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-72.png">
-	<!-- iPhone 6 Plus icon -->
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-180.png">
-	<!-- iPhone retina icon (iOS < 7) -->
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-114.png">
-	<!-- iPhone non-retina icon (iOS < 7) -->
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-57.png">
+		<title>Apps - Justin Holmes</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="bower_components/patternfly/dist/img/favicon.ico">
+		<!-- iPad retina icon -->
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-152.png">
+		<!-- iPad retina icon (iOS < 7) -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-144.png">
+		<!-- iPad non-retina icon -->
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-76.png">
+		<!-- iPad non-retina icon (iOS < 7) -->
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-72.png">
+		<!-- iPhone 6 Plus icon -->
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-180.png">
+		<!-- iPhone retina icon (iOS < 7) -->
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-114.png">
+		<!-- iPhone non-retina icon (iOS < 7) -->
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-57.png">
 
-	<!-- PatternFly Styles -->
-	<!-- Note: No other CSS files are needed regardless of what other JS packages located in patternfly/components that you decide to pull in -->
-	<link rel="stylesheet" href="bower_components/patternfly/dist/css/patternfly.min.css" />
-	<link rel="stylesheet" href="bower_components/patternfly/dist/css/patternfly-additions.min.css" />
+		<!-- PatternFly Styles -->
+		<!-- Note: No other CSS files are needed regardless of what other JS packages located in patternfly/components that you decide to pull in -->
+		<link rel="stylesheet" href="bower_components/patternfly/dist/css/patternfly.min.css" />
+		<link rel="stylesheet" href="bower_components/patternfly/dist/css/patternfly-additions.min.css" />
 
-	<!-- jQuery -->
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<!-- jQuery -->
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 
-	<!-- Bootstrap JS -->
-	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-	<!-- C3, D3 - Charting Libraries -->
-	<!--
+		<!-- C3, D3 - Charting Libraries -->
+		<!--
 	<script src="bower_components/c3/c3.min.js"></script>
 	<script src="bower_components/d3/d3.min.js"></script>
--->
+	-->
 	<!-- Datatables, jQuery Grid Component -->
 	<!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
 	<script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
@@ -55,6 +58,9 @@
 
 	<!-- Bootstrap Date Picker` -->
 	<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+
+	<!-- Moment - required by Bootstrap Date Time Picker -->
+	<script src="bower_components/moment/min/moment.min.js"></script>
 
 	<!-- Bootstrap Date Time Picker - requires Moment -->
 	<script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
@@ -77,12 +83,15 @@
 	<!-- MatchHeight - Used to make sure dashboard cards are the same height -->
 	<script src="bower_components/matchHeight/jquery.matchHeight-min.js"></script>
 
-	<!-- Moment - required by Bootstrap Date Time Picker -->
-	<script src="bower_components/moment/min/moment.min.js"></script>
+	<!-- AngularJS -->
+	<script src="bower_components/angular/angular.min.js"></script>
+
+	<!-- App specific AngularJS controllers -->
+	<script src="app/js/controllers.js"></script>
 
 </head>
 
-<body>
+<body ng-controller="AppListCtrl">
 	<nav class="navbar navbar-default navbar-pf" role="navigation">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
@@ -112,93 +121,37 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-				<!--
-				<ol class="breadcrumb">
-					<li><a href="#">Home</a></li>
-					<li>Apps</li>
-				</ol>
-				-->
-				<h1>An index of apps I'm hosting. If you have questions, <a href="mailto:jholmes@redhat.com" target="_blank">contact me</a>.</h1>
-				<table class="datatable table table-striped table-bordered">
-					<thead>
-						<tr>
-							<th>Name</th>
-							<th>URL</th>
-							<th>Notes</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Business Central 6.3.0 ER1</td>
-							<td><a href="http://apps.justinholmes.co:8630/business-central" target="_blank">http://apps.justinholmes.co:8630/business-central</a></td>
-							<td>Environment for Business Automation Solution Development</td>
-						</tr>
-						<tr>
-							<td>KIE Server 6.3.0 ER1</td>
-							<td><a href="http://apps.justinholmes.co:8630/kie-server/services/rest/server" target="_blank">http://apps.justinholmes.co:8630/kie-server/services/rest/server</a></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>Dashbuilder 6.3.0 ER1</td>
-							<td><a href="http://apps.justinholmes.co:8630/dashbuilder" target="_blank">http://apps.justinholmes.co:8630/dashbuilder</a></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>Business Central 6.2.1</td>
-							<td><a href="http://apps.justinholmes.co:8621/business-central" target="_blank">http://apps.justinholmes.co:8621/business-central</a></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>KIE Server 6.2.1</td>
-							<td><a href="http://apps.justinholmes.co:8621/kie-server/services/rest/server" target="_blank">http://apps.justinholmes.co:8621/kie-server/services/rest/server</a></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>Dashbuilder 6.2.1</td>
-							<td><a href="http://apps.justinholmes.co:8621/dashbuilder" target="_blank">http://apps.justinholmes.co:8621/dashbuilder</a></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>Business Central 6.1.5</td>
-							<td><a href="http://apps.justinholmes.co:8615/business-central" target="_blank">http://apps.justinholmes.co:8615/business-central</a></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>KIE Server 6.1.5</td>
-							<td><a href="http://apps.justinholmes.co:8615/kie-server/services/rest/server" target="_blank">http://apps.justinholmes.co:8615/kie-server/services/rest/server</a></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>Dashbuilder 6.1.5</td>
-							<td><a href="http://apps.justinholmes.co:8615/dashbuilder" target="_blank">http://apps.justinholmes.co:8615/dashbuilder</a></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>Business Central 6.2.2</td>
-							<td><a href="http://apps.justinholmes.co:8080/business-central" target="_blank">http://apps.justinholmes.co:8080/business-central</a></td>
-							<td>Environment for Nick Balkissoon and David van Balen</td>
-						</tr>
-						<tr>
-							<td>Business Central 6.3.0.ER1</td>
-							<td><a href="http://10.3.11.245:8080/business-central" target="_blank">http://10.3.11.245:8080/business-central</a></td>
-							<td>Alex Jurcenko's sandbox</td>
-						</tr>
-						<tr>
-							<td>KIE Server 6.3.0.ER1</td>
-							<td><a href="http://10.3.11.245:8080/kie-server/services/rest/server" target="_blank">http://10.3.11.245:8080/kie-server/services/rest/server</a></td>
-							<td>Alex Jurcenko's sandbox</td>
-						</tr>
-						<tr>
-							<td>Dashbuilder 6.3.0.ER1</td>
-							<td><a href="http://10.3.11.245:8080/dashbuilder" target="_blank">http://10.3.11.245:8080/dashbuilder</a></td>
-							<td>Alex Jurcenko's sandbox</td>
-						</tr>
-					</tbody>
-				</table>
-			</div><!-- /col -->
-		</div><!-- /row -->
-	</div><!-- /container -->
-	<script>
+			<h1>
+				An index of apps I'm hosting. If you have questions,
+				<a href="mailto:jholmes@redhat.com" target="_blank">contact me</a>
+				.
+			</h1>
+
+			<table class="datatable table table-striped table-bordered">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>URL</th>
+						<th>Notes</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="app in apps">
+						<td>{{ app.name }}</td>
+						<td>
+							<a href="{{ app.uri }}" target="_blank">{{ app.uri }}</a>
+						</td>
+						<td>{{ app.notes }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- /col -->
+	</div>
+	<!-- /row -->
+</div>
+<!-- /container -->
+<script>
       // Initialize Datatables
       $(document).ready( function() {
       	$('.datatable').dataTable();
