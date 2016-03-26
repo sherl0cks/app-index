@@ -11,26 +11,30 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="bower_components/patternfly/dist/img/favicon.ico">
+		<link rel="shortcut icon" href="app/img/favicon.ico">
 		<!-- iPad retina icon -->
-		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-152.png">
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="app/img/apple-touch-icon-precomposed-152.png">
 		<!-- iPad retina icon (iOS < 7) -->
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-144.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="app/img/apple-touch-icon-precomposed-144.png">
 		<!-- iPad non-retina icon -->
-		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-76.png">
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="app/img/apple-touch-icon-precomposed-76.png">
 		<!-- iPad non-retina icon (iOS < 7) -->
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-72.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="app/img/apple-touch-icon-precomposed-72.png">
 		<!-- iPhone 6 Plus icon -->
-		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-180.png">
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="app/img/apple-touch-icon-precomposed-180.png">
 		<!-- iPhone retina icon (iOS < 7) -->
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="app/img/apple-touch-icon-precomposed-114.png">
 		<!-- iPhone non-retina icon (iOS < 7) -->
-		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="bower_components/patternfly/dist/img/apple-touch-icon-precomposed-57.png">
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="app/img/apple-touch-icon-precomposed-57.png">
 
 		<!-- PatternFly Styles -->
 		<!-- Note: No other CSS files are needed regardless of what other JS packages located in patternfly/components that you decide to pull in -->
+		<!--
 		<link rel="stylesheet" href="bower_components/patternfly/dist/css/patternfly.min.css" />
 		<link rel="stylesheet" href="bower_components/patternfly/dist/css/patternfly-additions.min.css" />
+		-->
+		<link rel="stylesheet" href="app/css/rcue.css" />
+		<link rel="stylesheet" href="app/css/rcue-additions.css" />
 
 		<!-- jQuery -->
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -83,15 +87,9 @@
 	<!-- MatchHeight - Used to make sure dashboard cards are the same height -->
 	<script src="bower_components/matchHeight/jquery.matchHeight-min.js"></script>
 
-	<!-- AngularJS -->
-	<script src="bower_components/angular/angular.min.js"></script>
-
-	<!-- App specific AngularJS controllers -->
-	<script src="app/js/controllers.js"></script>
-
 </head>
 
-<body ng-controller="AppListCtrl">
+<body>
 	<nav class="navbar navbar-default navbar-pf" role="navigation">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
@@ -121,41 +119,45 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-			<h1>
-				An index of apps I'm hosting. If you have questions,
-				<a href="mailto:jholmes@redhat.com" target="_blank">contact me</a>
-				.
-			</h1>
+				<h1>
+					An index of apps I'm hosting. If you have questions,
+					<a href="mailto:jholmes@redhat.com" target="_blank">contact me</a>
+					.
+				</h1>
 
-			<table class="datatable table table-striped table-bordered">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>URL</th>
-						<th>Notes</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr ng-repeat="app in apps">
-						<td>{{ app.name }}</td>
-						<td>
-							<a href="{{ app.uri }}" target="_blank">{{ app.uri }}</a>
-						</td>
-						<td>{{ app.notes }}</td>
-					</tr>
-				</tbody>
-			</table>
+				<table class="datatable table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>URL</th>
+							<th>Notes</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+			<!-- /col -->
 		</div>
-		<!-- /col -->
+		<!-- /row -->
 	</div>
-	<!-- /row -->
-</div>
-<!-- /container -->
-<script>
+	<!-- /container -->
+	<script>
       // Initialize Datatables
       $(document).ready( function() {
-      	$('.datatable').dataTable();
-      });
+      	$('.datatable').dataTable({
+        "ajax": {
+        	"url": "http://apps.justinholmes.co/mongo/apps/apps/56f5618ea94bba245f723743",
+         	"dataSrc": "apps"
+    	 },
+        "columns": [
+            { "data": "name" },
+            {
+            	"data": "uri",
+            	"render": function ( data, type, full, meta ) {return '<a href="'+data+'">'+data+'</a>'; }
+      		},
+            { "data": "notes" }
+        ]
+    });
+  });
   </script>
 
 </body>
