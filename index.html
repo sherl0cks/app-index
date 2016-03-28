@@ -43,104 +43,111 @@
 		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 		<!-- C3, D3 - Charting Libraries -->
-		<!--
-	<script src="bower_components/c3/c3.min.js"></script>
-	<script src="bower_components/d3/d3.min.js"></script>
-	-->
-	<!-- Datatables, jQuery Grid Component -->
-	<!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
-	<script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-	<script src="bower_components/datatables-colvis/js/dataTables.colVis.js"></script>
-	<script src="bower_components/datatables-colreorder/js/dataTables.colReorder.js"></script>
 
-	<!-- PatternFly Custom Componets -  Sidebar, Popovers and Datatables Customizations -->
-	<!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
-	<script src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
+		<script src="bower_components/c3/c3.min.js"></script>
+		<script src="bower_components/d3/d3.min.js"></script>
 
-	<!-- Bootstrap Combobox -->
-	<script src="bower_components/bootstrap-combobox/js/bootstrap-combobox.js"></script>
+		<!-- Datatables, jQuery Grid Component -->
+		<!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
+		<script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+		<script src="bower_components/datatables-colvis/js/dataTables.colVis.js"></script>
+		<script src="bower_components/datatables-colreorder/js/dataTables.colReorder.js"></script>
 
-	<!-- Bootstrap Date Picker` -->
-	<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+		<!-- PatternFly Custom Componets -  Sidebar, Popovers and Datatables Customizations -->
+		<!-- Note: jquery.dataTables.js must occur in the html source before patternfly*.js.-->
+		<script src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
 
-	<!-- Moment - required by Bootstrap Date Time Picker -->
-	<script src="bower_components/moment/min/moment.min.js"></script>
+		<!-- Bootstrap Combobox -->
+		<script src="bower_components/bootstrap-combobox/js/bootstrap-combobox.js"></script>
 
-	<!-- Bootstrap Date Time Picker - requires Moment -->
-	<script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+		<!-- Bootstrap Date Picker` -->
+		<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 
-	<!-- Bootstrap Select -->
-	<script src="bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+		<!-- Moment - required by Bootstrap Date Time Picker -->
+		<script src="bower_components/moment/min/moment.min.js"></script>
 
-	<!-- Bootstrap Switch -->
-	<script src="bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+		<!-- Bootstrap Date Time Picker - requires Moment -->
+		<script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 
-	<!-- Bootstrap Touchspin -->
-	<script src="bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+		<!-- Bootstrap Select -->
+		<script src="bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 
-	<!-- Bootstrap Tree View -->
-	<script src="bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+		<!-- Bootstrap Switch -->
+		<script src="bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
 
-	<!-- Google Code Prettify - Syntax highlighting of code snippets -->
-	<script src="bower_components/google-code-prettify/bin/prettify.min.js"></script>
+		<!-- Bootstrap Touchspin -->
+		<script src="bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
 
-	<!-- MatchHeight - Used to make sure dashboard cards are the same height -->
-	<script src="bower_components/matchHeight/jquery.matchHeight-min.js"></script>
+		<!-- Bootstrap Tree View -->
+		<script src="bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+
+		<!-- Google Code Prettify - Syntax highlighting of code snippets -->
+		<script src="bower_components/google-code-prettify/bin/prettify.min.js"></script>
+
+		<!-- MatchHeight - Used to make sure dashboard cards are the same height -->
+		<script src="bower_components/matchHeight/jquery.matchHeight-min.js"></script>
 
 </head>
 
 <body>
-	<nav class="navbar navbar-default navbar-pf" role="navigation">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="/">
-				<img src="bower_components/patternfly/dist/img/brand.svg" alt="PatternFly Enterprise Application" />
-			</a>
-		</div>
-		<div class="collapse navbar-collapse navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-primary">
-				<li class="active">
-					<a href="index.html" class="active">Apps</a>
-				</li>
-				<li>
-					<a href="http://blog.justinholmes.co">Blog</a>
-				</li>
-				<li>
-					<a href="http://files.justinholmes.co">Files</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<h1>
-					An index of apps I'm hosting. If you have questions,
-					<a href="mailto:jholmes@redhat.com" target="_blank">contact me</a>
-					.
-				</h1>
-
-				<table class="datatable table table-striped table-bordered">
-					<thead>
-						<tr>
-							<th>Name</th>
-							<th>URL</th>
-							<th>Notes</th>
-						</tr>
-					</thead>
-				</table>
+		<nav class="navbar navbar-default navbar-pf" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">
+					<img src="bower_components/patternfly/dist/img/brand.svg" alt="PatternFly Enterprise Application" />
+				</a>
 			</div>
-			<!-- /col -->
+			<div class="collapse navbar-collapse navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-primary">
+					<li class="active">
+						<a href="index.html" class="active">Apps</a>
+					</li>
+					<li>
+						<a href="http://blog.justinholmes.co">Blog</a>
+					</li>
+					<li>
+						<a href="http://redhat.slides.com/jholmes">Slides</a>
+					</li>
+					<li>
+						<a href="mailto:jholmes@redhat.com" target="_blank">Contact Me</a></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<table class="datatable table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>URL</th>
+								<th>Notes</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<!-- /col -->
+			</div>
+			<!-- /row -->
 		</div>
-		<!-- /row -->
-	</div>
-	<!-- /container -->
-	<script>
+		<!-- /container -->
+		<footer>
+			<div class="container">
+				<div class="col-xs-6">
+					<img class="img-responsive center-block" width=100% src="https://s3.amazonaws.com/media-p.slid.es/uploads/team-32/images/1583223/Logotype_RH_Consulting_RGB_Gray.svg"/>
+				</div>
+				<div class="col-xs-6">
+					<img class="img-responsive center-block" width=100% src="https://s3.amazonaws.com/media-p.slid.es/uploads/team-32/images/2183129/redhat-logo.svg"/>
+				</div>
+			</div>
+		</footer>
+		<script>
       // Initialize Datatables
       $(document).ready( function() {
       	$('.datatable').dataTable({
@@ -161,4 +168,4 @@
   </script>
 
 </body>
-</html>
+	</html>

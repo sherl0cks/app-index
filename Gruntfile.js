@@ -183,7 +183,7 @@ module.exports = function (grunt) {
         tasks: ['jslint', 'uglify']
       },
       livereload: {
-        files: ['dist/css/*.css', 'dist/js/*.js', 'tests/*.html', '!tests-src/*.html', '*.html']
+        files: ['app/js/*.js', '*.html']
       },
       options: {
         livereload: true
