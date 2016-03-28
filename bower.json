@@ -18,6 +18,10 @@
   ],
   "dependencies": {
     "patternfly": "3.3.1",
-    "angular" : "1.5.3"
+    "angular": "1.5.3",
+    "jquery-datatables-column-filter": "latest"
+  },
+  "resolutions": {
+    "datatables": "1.10.9"
   }
 }
